@@ -30,12 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(@NonNull Throwable e) {
-
+                Log.i("MainActivity", String.valueOf(e));
             }
 
             @Override
             public void onComplete() {
-
+                Log.i("MainActivity", "onComplete");
             }
         });
     }
