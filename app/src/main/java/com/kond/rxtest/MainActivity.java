@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Observable<Integer> observable = Observable.just(1, 2, 4);
+        Observable<Integer> observable = Observable.just(1, 2, 4, 5, 19, 22, 34, 56, 0, 43);
         observable.subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(@NonNull Disposable d) {
