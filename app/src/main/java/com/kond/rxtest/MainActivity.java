@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Observable<Integer> observable = Observable.just(1, 2, 4, 5, 19, 22, 34, 56, 0, 43);
+        Observable<Integer> observable = Observable.just(1);
         observable.subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(@NonNull Disposable d) {
@@ -30,12 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(@NonNull Throwable e) {
-                Log.i("MainActivity", String.valueOf(e));
+
             }
 
             @Override
             public void onComplete() {
-                Log.i("MainActivity", "onComplete");
+
             }
         });
     }
